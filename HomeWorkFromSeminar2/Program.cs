@@ -33,7 +33,6 @@ else
     }
     Console.WriteLine(Math.Abs(num) % 10);
 }
-    
 
 
 
