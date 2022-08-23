@@ -7,7 +7,16 @@ Console.Write("Введите число А: ");
 int A = int.Parse(Console.ReadLine());
 Console.Write("Введите число B: ");
 int B = int.Parse(Console.ReadLine());
-Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {Math.Pow(A,B)}");
+// Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {Math.Pow(A,B)}");
+
+int result = 1;
+
+for (int i = 1; i <= B; i++)
+{
+    result *= A;
+}
+
+Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {result}");
 
 
 
