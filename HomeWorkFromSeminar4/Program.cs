@@ -3,20 +3,20 @@
 // 2, 4 -> 16
 
 
-Console.Write("Введите число А: ");
-int A = int.Parse(Console.ReadLine());
-Console.Write("Введите число B: ");
-int B = int.Parse(Console.ReadLine());
-// Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {Math.Pow(A,B)}");
+// Console.Write("Введите число А: ");
+// int A = int.Parse(Console.ReadLine());
+// Console.Write("Введите число B: ");
+// int B = int.Parse(Console.ReadLine());
+// // Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {Math.Pow(A,B)}");
 
-int result = 1;
+// int result = 1;
 
-for (int i = 1; i <= B; i++)
-{
-    result *= A;
-}
+// for (int i = 1; i <= B; i++)
+// {
+//     result *= A;
+// }
 
-Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {result}");
+// Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {result}");
 
 
 
@@ -26,21 +26,24 @@ Console.WriteLine($"Число A = {A} в степени B = {B}: {A}^{B} = {res
 // 82 -> 10
 // 9012 -> 12
 
-int GetSumNums(int number)
+int GetCountDigit(int number)
 {
     int sum = 0;
-    for (int i = 1; i <= Math.Abs(number); i++)
-    {
-        sum += i;
-    } 
-    return sum;
-} 
+    int lastDigit = 0;
     
+    while(Math.Abs(number) > 0)
+    {
+        lastDigit = number % 10;
+        sum += lastDigit;
+        number = number / 10;
+    }
+    
+    return sum;
+}
 
-// Console.Clear();
-// Console.Write("Введите число: ");
-// int num = int.Parse(Console.ReadLine());
-// Console.WriteLine($"сумма цифр числа: {GetSumNums(num)}");
+Console.WriteLine("Ввведите число: ");
+int num = int.Parse(Console.ReadLine());
+Console.WriteLine($"Сумма цифр в числе: {GetCountDigit(num)}");
 
 
 
@@ -56,5 +59,6 @@ int GetSumNums(int number)
 //     array[i] = new Random().Next(0,100);
 //     Console.Write($"{array[i]}, ");
 // }
+// array[array.Length - 1] = new Random().Next(0,100);
 // Console.Write($"{array[array.Length - 1]}]");
 // Console.WriteLine();
