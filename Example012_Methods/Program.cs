@@ -36,6 +36,7 @@ int Method3()
 // int year = Method3();
 // Console.WriteLine(year);
 
+// Вид 4
 string Method4(int count, string c)
 {
     int i = 0;
